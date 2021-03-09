@@ -1,0 +1,41 @@
+{
+  "Name": "local/mongo",
+  "Version": "0.0.9-0",
+  "DisplayName": "Rocketchat-Mongo",
+  "Description": "Mongo DB for Rocketchat",
+  "Logo": "https://cloudogu.com/images/dogus/nginx.png",
+  "Category": "Base",
+  "Tags": [
+    "database"
+  ],
+  "Url": "https://localhost/rocketchat-mongo",
+  "Image": "local/mongo",
+  "Dependencies": [
+  ],
+  "Configuration": [
+  ],
+  "HealthChecks": [
+    {
+      "Type": "tcp",
+      "Port": 27017
+    }
+  ],
+  "Properties": {
+    "stopAtBackup": "false"
+  },
+  "Volumes": [
+    {
+      "Name": "rocketchat-db",
+      "Path": "/data/db",
+      "Owner": "1000",
+      "Group": "1000",
+      "NeedsBackup": true
+    }
+  ]
+}
+
+
+
+
+
+

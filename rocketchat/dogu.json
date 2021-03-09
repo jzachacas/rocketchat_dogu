@@ -1,0 +1,42 @@
+{
+  "Name": "local/rocketchat",
+  "Version": "0.0.9-0",
+  "DisplayName": "Rocketchat",
+  "Description": "Rocketchat",
+  "Logo": "https://cloudogu.com/images/dogus/nginx.png",
+  "Category": "Base",
+  "Tags": [
+    "webserver"
+  ],
+  "Url": "https://localhost/rocketchat",
+  "Image": "local/rocketchat",
+  "Dependencies": [
+    "mongo"
+  ],
+  "Configuration": [
+  ],
+  "HealthChecks": [
+    {
+      "Type": "tcp",
+      "Port": 3000
+    }
+  ],
+  "Properties": {
+    "stopAtBackup": "false"
+  },
+  "Volumes": [
+    {
+      "Name": "uploads",
+      "Path": "/app/uploads",
+      "Owner": "1000",
+      "Group": "1000",
+      "NeedsBackup": true
+    }
+  ]
+}
+
+
+
+
+
+
